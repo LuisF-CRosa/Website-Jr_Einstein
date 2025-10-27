@@ -54,3 +54,7 @@ Site institucional da organização estudantil Insper Code, apresentando serviç
    yarn dev
    ```
 4. Acesse no navegador: http://localhost:3000
+
+git add .
+git commit -m "minha alteração"
+git push origin luis_felipe
