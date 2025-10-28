@@ -45,7 +45,7 @@ export function SuccessCasesSection() {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-serif font-bold text-4xl md:text-5xl text-[#083D77] mb-6 text-balance">
+            <h2 className="font-bold md:text-5xl text-2xl bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent mb-6 text-balance">
               Cases de Sucesso
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto text-pretty">
@@ -69,14 +69,14 @@ export function SuccessCasesSection() {
                       alt={caseItem.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#083D77]/80 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#085D77]/50 to-[#73AE6F]/50"></div>
                     <div className="absolute top-4 left-4">
-                      <span className="inline-block px-4 py-1.5 bg-[#416B98] text-white text-sm font-medium rounded">
+                      <span className="inline-block px-4 py-1.5 bg-[#416B98]/75 text-white text-sm font-medium rounded">
                         {caseItem.tag}
                       </span>
                     </div>
                     <div className="absolute bottom-4 left-4">
-                      <h3 className="font-serif font-bold text-2xl text-white">{caseItem.title}</h3>
+                      <h3 className="font-bold text-2xl text-white">{caseItem.title}</h3>
                     </div>
                   </div>
                   <div className="p-6">
