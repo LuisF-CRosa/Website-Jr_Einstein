@@ -53,7 +53,7 @@ export function Services() {
               return (
                 <div key={index} className="group perspective-1000 h-64">
                   {/* Flip container */}
-                  <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:[transform:rotateY(180deg)]">
+                  <div className="relative shadow-xl w-full h-full transition-transform duration-700 transform-style-3d group-hover:[transform:rotateY(180deg)]">
                     {/* Back side - shows initially */}
                     <div className="absolute inset-0 backface-hidden rounded-xs bg-gradient-to-br from-[#416B98] to-[#73AE6F] flex items-center justify-center">
                       <div className="text-center">
