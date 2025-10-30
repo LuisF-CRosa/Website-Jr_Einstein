@@ -26,19 +26,13 @@ export function Contact() {
               <ContactInfoCard
                 icon={<PiClock className="text-2xl" />}
                 title="Email"
-                description="contato@exemplo.com"
-              />
-
-              <ContactInfoCard
-                icon={<PiClock className="text-2xl" />}
-                title="Telefone"
-                description="+55 (11) 1234-5678"
+                description="consultoriajr.einstein@outlook.com"
               />
 
               <ContactInfoCard
                 icon={<PiClock className="text-2xl" />}
                 title="Endereço"
-                description="Campus Universitário, Prédio A, Sala 301"
+                description="Faculdade Israelita de Ciências da Saúde Albert Einstein - Rua Comendador Elias Jaffet, 755"
               />
             </div>
           </div>
