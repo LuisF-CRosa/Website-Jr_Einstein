@@ -6,52 +6,68 @@ export function Footer() {
     <footer
       id="footer"
       className="
-        w-full bg-[#1b3e64] text-white text-sm
-        flex flex-col items-center order-1 md:flex-row md:justify-between md:items-center
-        gap-6 md:gap-0
-        px-6 sm:px-10 lg:px-24
-        py-10
+        w-full bg-[#EEEEEE] text-gray-700
+        flex flex-col md:flex-row justify-between items-center
+        px-6 sm:px-12 lg:px-24 py-12 gap-10 md:gap-6
       "
     >
-
-      <address className="not-italic leading-relaxed text-center md:text-left">
-        <p>Rua Quatá, 200, Vila Olímpia</p>
-        <p>São Paulo / SP – Brasil</p>
-        <p>CEP 04546-042</p>
-      </address>
-
-      <div className="relative w-80 h-25">
-        <Image src="/assets/logo_branco2.png" alt="a" fill className="object-cover" />
+      {/* Coluna 1 - Quem somos */}
+      <div className="max-w-sm text-center md:text-left">
+        <h2 className="text-lg font-semibold bg-gradient-to-r from-[#218B7E] to-[#3F6A9A] bg-clip-text text-transparent">Quem somos</h2>
+        <p className="text-sm leading-relaxed text-gray-600">
+          Capacitando estudantes a entregar soluções tecnológicas profissionais
+          enquanto desenvolvem experiência prática.
+        </p>
       </div>
 
-      <div className="flex flex-col items-center md:items-end gap-3 text-center md:text-right">
-        <nav
-          aria-label="Redes sociais"
-          className="flex justify-center md:justify-end gap-3 text-3xl"
-        >
-          <a
-            href="https://www.instagram.com/inspercode/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="hover:text-zinc-300 transition-colors"
-          >
-            <PiInstagramLogo />
-          </a>
+      {/* Coluna 2 - Siga-nos */}
+        <div className="max-w-sm text-left">
+          <h2 className="text-lg font-semibold bg-gradient-to-r from-[#218B7E] to-[#3F6A9A] bg-clip-text text-transparent">Siga-nos</h2>
+          <div className="flex gap-2">
+            {/* Ícone do LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/consultoria-j%C3%BAnior-einstein/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Image
+                src="/assets/redes/linkedin_icon.png"
+                alt="LinkedIn"
+                width={50}
+                height={50}
+                className="hover:opacity-75 transition-opacity"
+              />
+            </a>
 
-          <a
-            href="https://www.linkedin.com/company/insper-code"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="hover:text-zinc-300 transition-colors"
-          >
-            <PiLinkedinLogo />
-          </a>
-        </nav>
+            {/* Ícone do Instagram */}
+            <a
+              href="https://www.instagram.com/consultoriajr.einstein/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <Image
+                src="/assets/redes/instagram_icon.png"
+                alt="Instagram"
+                width={50}
+                height={50}
+                className="hover:opacity-75 transition-opacity"
+              />
+            </a>
+          </div>
+        </div>
 
-        <small>© 2025 Insper Code. Todos os direitos reservados.</small>
+      {/* Coluna 3 - Logo */}
+      <div className="relative w-32 h-20 md:w-40 md:h-24">
+        <Image
+          src="/assets/logos/logo_junior_cinza.png"
+          alt="Insper Code logo"
+          fill
+          className="object-contain"
+        />
       </div>
     </footer>
   );
 }
+

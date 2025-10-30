@@ -4,7 +4,7 @@ import { Header } from "../components/header"
 import { Slogan } from "../components/slogan"
 import { AboutUs } from "../components/about";
 import { Services } from "../components/services";
-import { Contact } from "../components/contact"
+import Contact from "../components/contact"
 import { Projects } from "../components/project";
 import { Wave } from "@/components/wave"
 import {Data} from "@/components/data-components/data"
