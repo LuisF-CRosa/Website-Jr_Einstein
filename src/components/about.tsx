@@ -5,19 +5,19 @@ export const aboutCards = [
     icon: Target,
     title: "Missão",
     description:
-      "Transformar o mercado de consultoria oferecendo serviços de excelência que formem profissionais qualificados. Atuamos com compromisso social e promovendo a tomada de decisão compartilhada para gerar impacto real nas organizações.",
+      "Transformamos o mercado de consultoria com serviços de excelência e formação de profissionais qualificados. Priorizamos compromisso social e decisões compartilhadas para gerar impacto real nas organizações.",
   },
   {
     icon: Eye,
     title: "Visão",
     description:
-      "Ser referência nacional em consultoria júnior, trazendo a cultura e a identidade Einstein para a busca contínua por soluções inovadoras. Queremos inspirar práticas que integrem conhecimento acadêmico e resultado prático, reconhecidas pela qualidade e relevância.",
+      "Ser referência nacional em consultoria júnior com a cultura Einstein na busca por soluções inovadoras. Integramos conhecimento acadêmico e resultado prático, reconhecidos pela qualidade e relevância.",
   },
   {
     icon: Heart,
     title: "Valores",
     description:
-      "Guiados por transparência, inovação e confiança, valorizamos a pluralidade do conhecimento e a excelência técnica em cada projeto. Priorizamos responsabilidade social, liderança, experiência prática e a preparação efetiva dos nossos membros para o mercado.",
+      "Transparência, inovação e confiança guiam nossa excelência técnica e pluralidade de conhecimento. Priorizamos responsabilidade social, liderança e preparação para o mercado.",
   },
 ];
 
@@ -41,27 +41,40 @@ export function About() {
           {aboutCards.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div
-                key={index}
-                className="
-                  relative rounded-sm p-[2px] 
-                  bg-transparent shadow-md
-                  transition-all duration-300
-                  hover:bg-gradient-to-br hover:from-[#416B98] hover:to-[#73AE6F]
-                "
-              >
-                <div className="bg-white rounded-sm p-8 h-full">
-                  <div className="w-12 h-12 flex items-center justify-center mb-4 text-[#416B98] group-hover:text-[#416B98] transition-colors duration-300">
-                    <Icon className="w-10 h-10" strokeWidth={2} />
-                  </div>
+              <div key={index} className="group perspective-1000 h-84">
+                  {/* Flip container */}
+                  <div className="relative shadow-xl w-full h-full transition-transform duration-700 transform-style-3d group-hover:[transform:rotateY(180deg)]">
+                    {/* Back side - shows initially */}
+                    <div className="absolute inset-0 backface-hidden rounded-xs bg-gradient-to-br from-[#416B98] to-[#73AE6F] flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto bg-white/20 backdrop-blur-sm mb-4">
+                          <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
+                        </div>
+                        <h3 className="font-semibold text-2xl text-white px-6">{item.title}</h3>
+                      </div>
+                    </div>
 
-                  <h3 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent transition-all duration-300">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                    {/* Front side - shows on hover */}
+                    <div className="absolute inset-0 backface-hidden [transform:rotateY(180deg)] rounded-xs">
+                    {/* Halo gradiente exibido no hover */}
+                    <div className="absolute -inset-0.5 rounded-xs bg-gradient-to-br from-[#3F6A9A] to-[#218B7E] opacity-0 blur-sm transition-all duration-500 group-hover:opacity-100" />
+                      <div className="relative bg-white rounded-xs p-6 h-full flex flex-col">
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className="w-14 h-14 bg-[#218B7E]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Icon className="w-7 h-7 text-[#7B99BA]" strokeWidth={1.5} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-xl bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent mb-2">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed mb-6">{item.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* </CHANGE> */}
                   </div>
-              </div>
+                </div>
             );
           })}
         </div>

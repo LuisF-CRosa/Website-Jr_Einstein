@@ -1,32 +1,60 @@
-import { Target, LineChart, Users, Activity } from "lucide-react"
+import { Target, LineChart, TrendingUp, Hospital, Route, HeartPulse, Calculator, MessageCircle, Activity } from "lucide-react"
 
 const services = [
   {
     icon: Target,
-    title: "Estratégia & Inteligência de Mercado",
+    title: "ESTRATÉGIA DE MARKETING",
     description:
-      "Posicionamos a marca para crescer com base em dados: definimos missão/visão/valores, público-alvo e proposta de valor. Unimos 4Ps a uma SWOT dos concorrentes para revelar diferenciais e oportunidades acionáveis.",
+      "Oferecemos planejamento completo para posicionar e crescer marcas: alinhamos identidade organizacional, público-alvo e ações táticas baseadas nos 4 P's. Inclui etapas desde missão/visão/valores até pesquisas de mercado e recomendações personalizadas, para elevar relevância e resultados tangíveis.",
     featured: true,
   },
   {
     icon: LineChart,
-    title: "Expansão & Viabilidade Financeira",
+    title: "ANÁLISE DE CONCORRENTES",
     description:
-      "Decida onde e como crescer com segurança. Avaliamos mercado, custos e receitas projetadas, calculando VPL, ROI e payback para cada cenário.",
+      "Analisamos concorrentes diretos e indiretos com metodologia SWOT: identificamos forças, fraquezas, oportunidades e ameaças do mercado. Fornecemos insights estruturados para embasar decisões competitivas, destacar seus diferenciais e revelar lacunas estratégicas no setor.",
     featured: false,
   },
   {
-    icon: Users,
-    title: "Experiência & Relacionamento com o Cliente",
+    icon: TrendingUp,
+    title: "ANÁLISE FINANCEIRA DE EXPANSÃO",
     description:
-      "Mapeamos a jornada completa (pré-compra ao pós-venda) para reduzir fricções e elevar satisfação. Criamos guidelines de atendimento (scripts, SLAs e rituais) que padronizam a qualidade e aumentam fidelização.",
+      "Avaliamos a viabilidade de crescimento combinando pesquisa de mercado e indicadores financeiros. Incluímos análise de mercado (público-alvo, concorrência e estratégias) e avaliação financeira (custos, projeções de lucro, VPL, ROI e payback). Fornecemos diagnóstico completo para decisões seguras sobre investimentos em expansão.",
     featured: false,
   },
   {
-    icon: Activity,
-    title: "Gestão & Economia da Saúde",
+    icon: Calculator,
+    title: "ANÁLISE DE CUSTO-EFETIVIDADE (ACE)",
     description:
-      "Para clínicas e consultórios: padronizamos processos e métricas e aplicamos avaliações econômicas (ACE/ACU com QALY) para priorizar intervenções com melhor custo-benefício. Resultado: operação eficiente e melhor experiência do paciente.",
+      "Compara custos e benefícios de intervenções em saúde. Possui o objetivo de identificar a opção de identificar a opção mais eficiente em termos de recursos, auxiliando na tomada de decisões em políticas públicas, planos de saúde ou investimentos em tratamentos.",
+    featured: false,
+  },
+  {
+    icon: HeartPulse,
+    title: "ANÁLISE CUSTO-UTILIDADE (ACU)",
+    description:
+      "Uma variação da ACE que incorpora preferências dos pacientes na medição de benefícios, usando metricas como qaly (anos de vida ajustados pela qualidade). Ideal para avaliar tratamentos que impactam não apenas na sobrevida, mas também a qualidade de impacto.",
+    featured: false,
+  },
+  {
+    icon: Route,
+    title: "MAPEAMENTO DA JORNADA DO CLIENTE",
+    description:
+      "Oferece uma análise detalhada de todas as interações do cliente com a marca, desde o primeiro contato até o pós-venda. Com uma metodologia em 8 etapas, o mapeamento identifica pontos críticos, oportunidades de melhoria e estratégias para otimizar a experiência do cliente, aumentando a satisfação e a fidelização.",
+    featured: false,
+  },
+  {
+    icon: MessageCircle,
+    title: "GUIDELINE DE RELACIONAMENTO COM O CLIENTE",
+    description:
+      "Criamos guidelines de relacionamento para construir e melhorar a interação empresa-cliente. Baseamos em pesquisas de mercado, análise de público-alvo e melhores práticas. Incluímos desde estudo de mercado até implementação e ajustes contínuos para padronizar atendimento, elevar satisfação e fortalecer fidelização.",
+    featured: false,
+  },
+  {
+    icon: Hospital,
+    title: "PROTOCOLO DE GESTÃO PARA CLÍNICAS E CONSULTÓRIOS",
+    description:
+      "Desenvolvemos protocolo de gestão para otimizar operação, finanças e experiência do paciente em clínicas e consultórios. Incluímos mapeamento de serviços, jornada do paciente, implementação de sistemas e métricas de feedback. Padronizamos processos para aumentar eficiência operacional e melhorar satisfação de pacientes e colaboradores.",
     featured: false,
   },
 ]
@@ -49,36 +77,33 @@ export function Services() {
             {services.map((service, index) => {
               const Icon = service.icon
               return (
-                <div key={index} className="group perspective-1000 h-64">
-                  {/* Flip container */}
-                  <div className="relative shadow-xl w-full h-full transition-transform duration-700 transform-style-3d group-hover:[transform:rotateY(180deg)]">
-                    {/* Back side - shows initially */}
-                    <div className="absolute inset-0 backface-hidden rounded-xs bg-gradient-to-br from-[#416B98] to-[#73AE6F] flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto bg-white/20 backdrop-blur-sm mb-4">
-                          <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
+                // Card com borda animada
+                <div
+                  key={index}
+                  className="group relative h-full rounded-xs p-0.5 transition-all"
+                >
+                  {/* Halo gradiente exibido no hover */}
+                  <div className="absolute -inset-0.5 rounded-xs bg-gradient-to-br from-[#3F6A9A] to-[#218B7E] opacity-0 blur-sm transition-all duration-500 group-hover:opacity-100" />
+                  {/* Conteúdo principal do card */}
+                  <div className="relative bg-white rounded-xs p-6 h-full flex flex-col">
+                    {/* Cabeçalho e texto com leve escala */}
+                    <div className="flex flex-col gap-4 transition-transform duration-300 ease-out group-hover:scale-[1.02]">
+                      <div className="flex items-start gap-4">
+                        {/* Ícone do serviço */}
+                        <div className="w-14 h-14 bg-[#c6e1ca]/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon className="w-7 h-7 text-[#7B99BA]" strokeWidth={1.5} />
                         </div>
-                        <h3 className="font-semibold text-2xl text-white px-6">{service.title}</h3>
-                      </div>
-                    </div>
-
-                    {/* Front side - shows on hover */}
-                    <div className="absolute inset-0 backface-hidden [transform:rotateY(180deg)] rounded-xs bg-gradient-to-r from-[#218B7E] to-[#3F6A9A] p-0.75 transition-all">
-                      <div className="bg-white rounded-xs p-6 h-full flex flex-col">
-                        <div className="flex items-start gap-4 mb-4">
-                          <div className="w-14 h-14 bg-[#218B7E]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Icon className="w-7 h-7 text-[#7B99BA]" strokeWidth={1.5} />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="font-semibold text-xl bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent mb-2">
-                              {service.title}
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                          </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-2xl bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent mb-3">
+                            {service.title}
+                          </h3>
                         </div>
                       </div>
+                      {/* Descrição */}
+                      <p className="text-gray-600 leading-relaxed flex-1">{service.description}</p>
                     </div>
-                    {/* </CHANGE> */}
+                    {/* Barra inferior que aumenta de tamanho */}
+                    <div className="mt-6 h-1 w-0 rounded-full bg-gradient-to-r from-[#416b98] to-[#73AE6F] transition-all duration-500 group-hover:w-full" />
                   </div>
                 </div>
               )
