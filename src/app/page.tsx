@@ -25,9 +25,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="flex flex-col items-center w-full mt-20 px-5">
+      <section id="contact" className="flex flex-col items-center w-full mt-20 xl: px-5">
         <div className="flex flex-col justify-center w-full max-w-6xl">
-          <h2 className="text-4xl font-semibold mb-3 text-left w-full text-zinc-700">Contato</h2>
           <Contact />
         </div>
       </section>
