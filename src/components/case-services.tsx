@@ -53,13 +53,13 @@ export function SuccessCasesSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
             {cases.map((caseItem, index) => {
               const Icon = caseItem.icon
               return (
                 <div
                   key={index}
-                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100"
+                  className="group bg-white rounded-sm overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100"
                 >
                   <div className="relative h-56 overflow-hidden">
                     <img
