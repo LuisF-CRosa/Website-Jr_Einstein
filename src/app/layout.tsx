@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Insper Code",
+  title: "Consultoria Junior Einstein",
 };
 
 export default function RootLayout({
