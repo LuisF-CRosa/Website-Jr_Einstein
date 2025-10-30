@@ -1,39 +1,39 @@
-import { Briefcase, BarChart3, Settings, GraduationCap } from "lucide-react"
+import { Target, LineChart, Users, Activity } from "lucide-react"
 
 const services = [
   {
-    icon: Briefcase,
-    title: "Consultoria estratégica",
+    icon: Target,
+    title: "Estratégia & Inteligência de Mercado",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis, rutrum turpis in, viverra urna.Lorem ipsum dolor sit amet.",
+      "Posicionamos a marca para crescer com base em dados: definimos missão/visão/valores, público-alvo e proposta de valor. Unimos 4Ps a uma SWOT dos concorrentes para revelar diferenciais e oportunidades acionáveis.",
     featured: true,
   },
   {
-    icon: BarChart3,
-    title: "Análise de dados",
+    icon: LineChart,
+    title: "Expansão & Viabilidade Financeira",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis, rutrum turpis in, viverra urna.Lorem ipsum dolor sit amet.",
+      "Decida onde e como crescer com segurança. Avaliamos mercado, custos e receitas projetadas, calculando VPL, ROI e payback para cada cenário.",
     featured: false,
   },
   {
-    icon: Settings,
-    title: "Gestão de projetos",
+    icon: Users,
+    title: "Experiência & Relacionamento com o Cliente",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis, rutrum turpis in, viverra urna.Lorem ipsum dolor sit amet.",
+      "Mapeamos a jornada completa (pré-compra ao pós-venda) para reduzir fricções e elevar satisfação. Criamos guidelines de atendimento (scripts, SLAs e rituais) que padronizam a qualidade e aumentam fidelização.",
     featured: false,
   },
   {
-    icon: GraduationCap,
-    title: "Mentorias",
+    icon: Activity,
+    title: "Gestão & Economia da Saúde",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis, rutrum turpis in, viverra urna.Lorem ipsum dolor sit amet.",
+      "Para clínicas e consultórios: padronizamos processos e métricas e aplicamos avaliações econômicas (ACE/ACU com QALY) para priorizar intervenções com melhor custo-benefício. Resultado: operação eficiente e melhor experiência do paciente.",
     featured: false,
   },
 ]
 
 export function Services() {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-10">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -41,9 +41,7 @@ export function Services() {
               Nossos Serviços
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto text-pretty">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis, rutrum turpis in,
-              viverra urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis,
-              rutrum turpis in, viverra urna.
+              Primeiro entendemos o seu negócio, depois, construímos a rota. Estratégia, dados e operação trabalhando juntos para gerar impacto real.
             </p>
           </div>
 
@@ -72,7 +70,7 @@ export function Services() {
                             <Icon className="w-7 h-7 text-[#7B99BA]" strokeWidth={1.5} />
                           </div>
                           <div className="flex-1">
-                            <h3 className="font-semibold text-2xl bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent mb-3">
+                            <h3 className="font-semibold text-xl bg-gradient-to-r from-[#416B98] to-[#73AE6F] bg-clip-text text-transparent mb-2">
                               {service.title}
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>

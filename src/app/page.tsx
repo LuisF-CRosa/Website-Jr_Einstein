@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-start bg-zinc-100">
 
-      <section id="home" className="relative w-full bg-white overflow-hidden">
+      <section id="home" className="relative w-full">
         <Header />
       </section>
 

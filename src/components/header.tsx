@@ -54,20 +54,6 @@ export function Header() {
           />
         </Link>
 
-        {/* botão “Membros” (só desktop) */}
-        <Link
-          href="/membros"
-          className="
-            hidden md:inline-block
-            px-3 py-1 rounded-sm font-medium
-            bg-transparent text-[#3773B5]
-            shadow-[inset_0_0_0_2px_#3773B5]
-            hover:shadow-[inset_0_0_0_2.5px_#3773B5]
-          "
-        >
-          Gestão
-        </Link>
-
         {/* botão hamburguer mobile */}
         <button
           className="
@@ -82,11 +68,10 @@ export function Header() {
         </button>
       </div>
 
-      {/* nav desktop (central) */}
+      {/* nav desktop (direita) */}
       <nav
         className="
-          hidden md:flex fixed top-3 left-1/2 -translate-x-1/2 z-50
-          bg-white rounded-full drop-shadow-lg px-1 py-1
+          hidden md:flex fixed top-3 right-1 z-50 bg-white rounded-full drop-shadow-lg px-1 py-1 mr-10
         "
       >
         {navItems.map(({ name, targetId }) => (
@@ -94,8 +79,8 @@ export function Header() {
             key={targetId}
             onClick={() => handleClick(targetId)}
             className={`
-              px-4 py-2 font-medium rounded-full hover:bg-[#327DCF]/10
-              ${activeSection === targetId ? "bg-[#327DCF]/30" : ""}
+              px-4 py-2 font-medium rounded-full hover:underline hover:bg-[#e1f2e8]/50
+              ${activeSection === targetId ? "underline" : ""}
             `}
           >
             {name}

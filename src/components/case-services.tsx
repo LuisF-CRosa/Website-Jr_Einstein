@@ -41,7 +41,7 @@ const cases = [
 
 export function SuccessCasesSection() {
   return (
-    <section id="cases" className="py-20">
+    <section id="cases" className="py-10">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -49,9 +49,7 @@ export function SuccessCasesSection() {
               Cases de Sucesso
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto text-pretty">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis, rutrum turpis in,
-              viverra urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem sagittis,
-              rutrum turpis in, viverra urna.
+              Nossos cases mostram resultados que permanecem, crescimento consistente, operações mais eficientes e marcas mais relevantes. Histórias em que metas viram conquistas e conquistas viram novo patamar.
             </p>
           </div>
 
