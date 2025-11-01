@@ -1,4 +1,5 @@
 import { TrendingUp, DollarSign, Clock, CheckCircle } from "lucide-react"
+import Image from 'next/image';
 
 const cases = [
   {
@@ -62,7 +63,7 @@ export function SuccessCasesSection() {
                   className="group bg-white rounded-sm overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100"
                 >
                   <div className="relative h-56 overflow-hidden">
-                    <img
+                    <Image
                       src={caseItem.image || "/placeholder.svg"}
                       alt={caseItem.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

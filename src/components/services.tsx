@@ -1,4 +1,4 @@
-import { Target, LineChart, TrendingUp, Hospital, Route, HeartPulse, Calculator, MessageCircle, Activity } from "lucide-react"
+import { Target, LineChart, TrendingUp, Hospital, Route, HeartPulse, Calculator, MessageCircle } from "lucide-react"
 
 const services = [
   {
