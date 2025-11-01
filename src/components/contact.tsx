@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ContactForm from "./contact-components/ContactForm";
 import ContactInfoCard from "./contact-components/ContactInfoCard";
 import { PiClock } from "react-icons/pi";
