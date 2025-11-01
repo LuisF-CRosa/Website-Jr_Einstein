@@ -66,7 +66,9 @@ export function SuccessCasesSection() {
                     <Image
                       src={caseItem.image || "/placeholder.svg"}
                       alt={caseItem.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      className="group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#085D77]/50 to-[#73AE6F]/50"></div>
                     <div className="absolute top-4 left-4">
